@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Projeto01.Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Projeto01.Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Projeto01.Domain.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projeto01.Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../Projeto01.Domain.Core/Projeto01.Domain.Core.csproj",
+      "msbuildProject": "../Projeto01.Domain.Core/Projeto01.Domain.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Projeto01.Domain.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\felip\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Curso_Coti_Adv_2022\\Projeto01\\Projeto01.Domain\\Projeto01.Domain.csproj",
+      "projectName": "Projeto01.Domain",
+      "projectPath": "C:\\Curso_Coti_Adv_2022\\Projeto01\\Projeto01.Domain\\Projeto01.Domain.csproj",
+      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+      "outputPath": "C:\\Curso_Coti_Adv_2022\\Projeto01\\Projeto01.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Curso_Coti_Adv_2022\\Projeto01\\Projeto01.Domain.Core\\Projeto01.Domain.Core.csproj": {
+              "projectPath": "C:\\Curso_Coti_Adv_2022\\Projeto01\\Projeto01.Domain.Core\\Projeto01.Domain.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

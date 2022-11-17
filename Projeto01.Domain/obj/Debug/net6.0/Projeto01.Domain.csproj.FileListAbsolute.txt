@@ -1,0 +1,15 @@
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\bin\Debug\net6.0\Projeto01.Domain.deps.json
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\bin\Debug\net6.0\Projeto01.Domain.dll
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\bin\Debug\net6.0\Projeto01.Domain.pdb
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\bin\Debug\net6.0\Projeto01.Domain.Core.dll
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\bin\Debug\net6.0\Projeto01.Domain.Core.pdb
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.csproj.AssemblyReference.cache
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.AssemblyInfoInputs.cache
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.AssemblyInfo.cs
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.csproj.CoreCompileInputs.cache
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.csproj.CopyComplete
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.dll
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\refint\Projeto01.Domain.dll
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\Projeto01.Domain.pdb
+C:\Curso_Coti_Adv_2022\Projeto01\Projeto01.Domain\obj\Debug\net6.0\ref\Projeto01.Domain.dll
