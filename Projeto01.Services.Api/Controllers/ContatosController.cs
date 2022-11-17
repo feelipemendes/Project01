@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Projeto01.Application.Interfaces;
 
 namespace Projeto01.Services.Api.Controllers
 {
@@ -7,6 +7,13 @@ namespace Projeto01.Services.Api.Controllers
     [ApiController]
     public class ContatosController : ControllerBase
     {
+        private readonly IContatoAppService _contatoAppService;
+
+        public ContatosController(IContatoAppService contatoAppService)
+        {
+            _contatoAppService = contatoAppService;
+        }
+
         [HttpPost]
         public IActionResult Post()
         {

@@ -1,4 +1,6 @@
-﻿using Projeto01.Domain.Core.Interfaces;
+﻿using FluentValidation.Results;
+using Projeto01.Domain.Core.Interfaces;
+using Projeto01.Domain.Validators;
 
 namespace Projeto01.Domain.Entities
 {
@@ -20,6 +22,12 @@ namespace Projeto01.Domain.Entities
         private string? _nome;
         private string? _email;
         private string? _telefone;
+
+        #endregion
+
+        #region Validation
+
+        public ValidationResult Validate => new ContatoValidator().Validate(this);
 
         #endregion
     }

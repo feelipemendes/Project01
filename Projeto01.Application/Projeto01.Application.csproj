@@ -7,13 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Abstractions\**" />
-    <EmbeddedResource Remove="Abstractions\**" />
-    <None Remove="Abstractions\**" />
+    <Folder Include="Mappings\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.3.0" />
+    <ProjectReference Include="..\Projeto01.Domain\Projeto01.Domain.csproj" />
   </ItemGroup>
 
 </Project>

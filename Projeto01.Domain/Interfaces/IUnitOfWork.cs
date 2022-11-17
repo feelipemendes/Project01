@@ -8,7 +8,7 @@
 
         #region Repositorios
 
-        public IContatoRepository ContatoRepository { get; set; }
+        public IContatoRepository ContatoRepository { get; }
 
         #endregion
     }
