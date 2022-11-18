@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Projeto01.Application.Commands;
 using Projeto01.Application.Interfaces;
 
 namespace Projeto01.Services.Api.Controllers
@@ -15,21 +17,71 @@ namespace Projeto01.Services.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> Post(ContatoCreateCommand command)
         {
-            return Ok();
+            try
+            {
+                var contato = await _contatoAppService.Create(command);
+                return StatusCode(201, contato);
+            }
+            catch (ValidationException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (ArgumentException ex) 
+            {
+                return StatusCode(400, new { ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message }); 
+            }
         }
 
         [HttpPut]
-        public IActionResult Put()
+        public async Task<IActionResult> Put(ContatoUpdateCommand command)
         {
-            return Ok();
+            try
+            {
+                var contato = await _contatoAppService.Update(command);
+                return StatusCode(200, contato);
+            }
+            catch (ValidationException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, new { ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            return Ok();
+            try
+            {
+                var command = new ContatoDeleteCommand()
+                {
+                    Id = id
+                };
+
+                var contato = await _contatoAppService.Delete(command);
+
+                return StatusCode(200, contato);
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, new { ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpGet]

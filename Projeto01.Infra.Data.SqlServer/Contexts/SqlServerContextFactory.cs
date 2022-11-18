@@ -6,7 +6,8 @@ namespace Projeto01.Infra.Data.SqlServer.Contexts
     {
         public SqlServerContext CreateDbContext(string[] args)
         {
-            return new SqlServerContext();
+            //return new SqlServerContext();
+            return null;
         }
     }
 }

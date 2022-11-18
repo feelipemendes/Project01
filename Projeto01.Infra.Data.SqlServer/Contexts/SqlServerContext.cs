@@ -6,9 +6,10 @@ namespace Projeto01.Infra.Data.SqlServer.Contexts
 {
     public class SqlServerContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public SqlServerContext(DbContextOptions<SqlServerContext> dbContextOptions)
+            : base(dbContextOptions)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BDProjeto01;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

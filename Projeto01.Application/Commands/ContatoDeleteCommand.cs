@@ -1,6 +1,9 @@
-﻿namespace Projeto01.Application.Commands
+﻿using MediatR;
+using Projeto01.Application.Models;
+
+namespace Projeto01.Application.Commands
 {
-    public class ContatoDeleteCommand
+    public class ContatoDeleteCommand : IRequest<ContatoDto>
     {
         public Guid Id { get; set; }
     }

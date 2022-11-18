@@ -34,12 +34,18 @@ namespace Projeto01.Infra.Data.SqlServer.Repositories
 
         public async virtual Task<List<TEntity>> GetAllAsync(int page, int limit)
             => await _sqlServerContext.Set<TEntity>()
+                .AsNoTracking()
                 .Skip(page)
                 .Take(limit)
                 .ToListAsync();
 
         public async virtual Task<TEntity> GetByIdAsync(TKey id)
-            => await _sqlServerContext.Set<TEntity>().FindAsync(id);
+        {
+            var result = await _sqlServerContext.Set<TEntity>().FindAsync(id);
+
+            _sqlServerContext.Entry(result).State = EntityState.Detached;
+            return result;
+        }
 
         public void Dispose()
         {

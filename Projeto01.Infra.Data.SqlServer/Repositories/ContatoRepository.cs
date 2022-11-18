@@ -1,4 +1,5 @@
-﻿using Projeto01.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto01.Domain.Entities;
 using Projeto01.Domain.Interfaces;
 using Projeto01.Infra.Data.SqlServer.Contexts;
 
@@ -15,10 +16,12 @@ namespace Projeto01.Infra.Data.SqlServer.Repositories
 
         public Contato GetByEmail(string email)
             => _sqlServerContext.Contatos
-                .First(x => x.Email.Equals(email));
+                .AsNoTracking()
+                .FirstOrDefault(x => x.Email.Equals(email));
 
         public Contato GetByTelefone(string telefone)
             => _sqlServerContext.Contatos
+                .AsNoTracking()
                 .FirstOrDefault(x => x.Telefone.Equals(telefone));
     }
 }
